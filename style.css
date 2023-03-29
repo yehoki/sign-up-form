@@ -1,0 +1,77 @@
+:root {
+    --image-width: 42dvw;
+    --container-height: 75dvh;
+    --container-width: 80dvw;
+    background-color: #123650;
+    --container-color: #EDC9AF;
+}
+
+
+* {
+    outline: solid black 3px;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: var(--container-width);
+    height: var(--container-height);
+    border-radius: 8px;
+    box-shadow: teal inset;
+    padding: 4px;
+    background-color: var(--container-color);
+}
+
+.left {
+    width: var(--image-width);
+    background-image: url(images/giraffe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    display: flex;
+    margin-right: 8px;
+}
+
+.left > .creds {
+    align-self: flex-end;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    margin: 2px;
+}
+
+.left > .creds > a:link,
+.left > .creds > a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.left > .creds > a:hover,
+.left > .creds > a:active {
+    color:black;
+    text-decoration: none;
+}
+
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: calc(100dvw - var(--image-width));
+    height:auto;
+    border-radius: 8px;
+}
+
+.information {
+    background-color: rgba(237,201,175,0.6);;
+}
