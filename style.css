@@ -115,6 +115,7 @@ input {
     border-radius: 4px;
     margin-bottom: 2rem;
     color:#123650;
+    max-width: fit-content;
 }
 
 input:focus {
@@ -133,6 +134,7 @@ input:focus {
     align-items: space-between;
     background-color: rgba(237,201,175,0.35);
     height: calc(0.33*var(--container-height));
+    max-width: calc(var(--container-width) - var(--image-width));
     box-shadow: 0 6px 4px -4px black;
     color:#123650;
 }
