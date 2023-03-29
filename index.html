@@ -5,32 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Sign-up form</title>
   </head>
   <body>
     <div class="container">
       <div class="left">
+        <div class="hero">
+          <img src="images/odin-lined.png" alt="The Odin Logo" />
+          <p>ODIN</p>
+        </div>
         <div class="creds">
-          Photo by
-          <a
-            href="https://unsplash.com/@arkam1120?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-            >Arkam Rahuman</a
-          >
-          on
-          <a
-            href="https://unsplash.com/t/animals?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-            >Unsplash</a
-          >
+          <p>
+            Photo by
+            <a
+              href="https://unsplash.com/@redcharlie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >
+              redcharlie</a
+            >
+            on
+            <a
+              href="https://unsplash.com/s/photos/safari?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              >Unsplash</a
+            >
+          </p>
         </div>
       </div>
       <div class="right">
-        Right, information, form
-        <div class="information">Information</div>
-        <div>Form</div>
-        <form action="#" method="post">
-          <label for="first_name">First name:</label>
-          <input type="text" name="first_name" id="first_name" />
-          <button type="submit">Create account</button>
+        <div class="information">
+          <p>
+            Safari. Want to go? Sign up <em> now </em> with your details to find
+            out more!
+          </p>
+        </div>
+        <form id="main" action="#" method="post">
+          <div class="inner-form">
+            <section class="data">
+              <div class="inputs">
+                <label for="first_name">First name</label>
+                <input type="text" name="first_name" />
+              </div>
+              <div class="inputs">
+                <label for="last_name">Last name</label>
+                <input type="text" name="last_name" id="last_name" />
+              </div>
+            </section>
+            <section class="data">
+              <div class="inputs">
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="inputs">
+                <label for="phone">Phone number</label>
+                <input type="text" name="phone" id="phone" />
+              </div>
+            </section>
+            <section class="data">
+              <div class="inputs">
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass" onchange="onSubmit()" />
+              </div>
+              <div class="inputs">
+                <label for="pass-again">Confirm password</label>
+                <input type="password" name="pass-again" id="pass-again" onchange="onSubmit()"/>
+              </div>
+            </section>
+          </div>
+          <div class="bottom-form">
+            <button type="submit" form="main" id="finish">Create account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+          </div>
         </form>
       </div>
     </div>
